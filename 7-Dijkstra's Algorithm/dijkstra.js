@@ -1,26 +1,38 @@
 const costs = {
-    'A': 6,
-    'B': 2,
+    'A': 5,
+    'C': 2,
+    'B': 1000,
+    'D': 1000,
     'Fin': 1000
 }
 
 const parents = {
     'A': 'Start',
-    'B': 'Start',
+    'B': '',
+    'D': '',
+    'C': 'Start',
     'Fin': ''
 }
 
 const graph = {
     'Start': {
-        'A': 6,
-        'B': 2
+        'A': 5,
+        'C': 2
     },
     'A': {
-        'Fin': 1
+        'B': 4,
+        'D': 2,
     },
     'B': {
-        'A': 3,
-        'Fin': 5
+        'D': 6,
+        'Fin': 3
+    },
+    'C': {
+        'A': 8,
+        'D': 7
+    },
+    'D': {
+        'Fin': 1
     },
     'Fin': ''
 }
