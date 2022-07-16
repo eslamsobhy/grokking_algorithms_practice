@@ -31,7 +31,7 @@ const graph = {
 // -----------------------------------------------------------
 
 // test case 1
-/*
+
 const costs = {
     'A': 5,
     'C': 2,
@@ -70,12 +70,12 @@ const graph = {
     },
     'Fin': ''
 }
-*/
+
 
 // ------------------------------------------------------------
 
 // test case (2)
-
+/*
 const costs = {
     'A': 10,
     'C': 1000,
@@ -106,6 +106,49 @@ const graph = {
     },
     'Fin': ''
 }
+*/
+// --------------------------------------------------------
+
+// test case (3)
+// this test case shouldn't be solved with the dijkstra's algorithm
+// it should be solved with Bellman-Ford algorithm instead.
+// since it has  -ve weight!
+
+/*
+const costs = {
+    'A': 2,
+    'C': 1000,
+    'B': 2,
+    'Fin': 1000
+}
+
+const parents = {
+    'A': 'Start',
+    'B': 'Start',
+    'C': '',
+    'Fin': ''
+}
+
+const graph = {
+    'Start': {
+        'A': 2,
+        'B': 2
+    },
+    'A': {
+        'C': 2,
+        'Fin': 2,
+    },
+    'B': {
+        'A': 2,
+    },
+    'C': {
+        'B': -1,
+        'Fin': 2,
+    },
+    'Fin': ''
+}
+*/
+
 let processed = [];
 
 
